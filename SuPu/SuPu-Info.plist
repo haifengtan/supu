@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh_CN</string>
+	<key>CFBundleDisplayName</key>
+	<string>速普商城</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+		<string>icon_72.png</string>
+		<string>icon_144.png</string>
+	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Icon.png</string>
+				<string>Icon@2x.png</string>
+				<string>icon_72.png</string>
+				<string>icon_144.png</string>
+			</array>
+		</dict>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string>cn.countnet.EasyDrive366</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>SuPu</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.3</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>SuPu</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.3</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>Partner</key>
+	<string>2088201363678709</string>
+	<key>RSA private key</key>
+	<string>MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALM8M8mw+9zatYX0ypRzDg+uI87NkztQhF5fnN3G+EUJ+ooZprdnXqjJ2XL3F19/WwXK8E4StlbRYMiI0Ow/JNOwjtO9YIu3I9yuQJy6HQEbIj5xFzwy84mPwBP1nPJTvinoUYSBqWBCC8b5BVGJcOTg+i0og6gB2U0Jv1i1B+F7AgMBAAECgYEAmDnATkOXldrXIv9l8rDJN34SAXlN26ml0rVn+GAdyh0QgawJkWkk1zwgB+leG4iB2Sij8dsorBHGHms87fkvH4OxaetbsGd3ZLTHyCn6HaTm+3K/3tcZOKmuedikL65+fw3umo7Hcdkqy0l0sVNZKULNatog8fuvsBQFYI7PuFECQQDbwlPlkkVsvjla8rJRpGtqVKdp23LyFJdqkTD0iqeOgX//aycJMf9SDfxzEn+4IWasuHKY1Sg5y5yG/DQGuuVJAkEA0MsOl3MxE/vmZCPZ2hEviBQJDfqtGMiKEZzUcmualBads4prOaiewzzNuk+xlMXOcXOXTip8W1B+t0BsvJzEowJAZpFgjvmiJYrzQhucVrai29H/AU1HbO1nbnmtm7VLVxviHdhpM8V+IVIdzaeIrOwJ+/tqoSJ7z93UhLwZnDqG4QJBAK90w/lPSsHRYCVs3yhaYsgGlilSK131P9lXIkxY0lh5vOJggoS8h1Xn5bYYPFGZ/EbobRC5sTEHLsUN9ZJ2ZuMCQQCFEPmLkeEQKxyJdyQgtDBf3lOkmqyjDFWG9Z0kPM603z5QPmYi/4JiCqVX2orHvVz6O7BJJusIffsy/p7i5srs</string>
+	<key>RSA public key</key>
+	<string>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLdDzDEln49xHnAjp8oYedEZlVzLhaKmR5I80ctIPuYF3UINCK3NlEd/12Z43TXOYaxbCwr4RWhCy4mv5/FcZESpJUC2t8WKjxS/fKpym3QIKB8iIIvzXom31R3MK2bxs+AICO43nDB/++QwwqCiHR+xYBvE21BG5mp8TQ9ISk7wIDAQAB</string>
+	<key>Seller</key>
+	<string>2088201363678709</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarHidden~ipad</key>
+	<false/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+</dict>
+</plist>
