@@ -184,7 +184,7 @@
         [cell.contentView addSubview:consultcontentlabel];
         [consultcontentlabel release];
         
-        UILabel *consulttime = [[UILabel alloc] initWithFrame:CGRectMake(240, 13, 70, 13)];
+        UILabel *consulttime = [[UILabel alloc] initWithFrame:CGRectMake(240, 13, 75, 13)];
         if (isPad) {
             consulttime.frame = CGRectMake(626, 26, 130, 26);
         }

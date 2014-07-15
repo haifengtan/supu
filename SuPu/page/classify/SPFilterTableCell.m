@@ -199,18 +199,33 @@
 	}
 	else
 	{
-		for(SPFilterButton * btn in [self subviews])
-		{
-			if (btn.tag >= BtnStartTag && btn.m_filterItemData.mselected)
-			{
-				btn.m_filterItemData.mselected = NO;
-				//修改图片
-				UIImageView *imgView=(UIImageView *)[btn viewWithTag:BUTTON_IMAGE_TAG];
-				[imgView setHidden:YES];
-                [btn setSelected:imgView.hidden];
-			}
-		}
-		
+        //修改选中的按钮样式  ios7系统中cell与cell.contentView之间多了一层：UITableViewCellScrollView 所以这里要加判断  2014-7-15
+        if (IS_IOS7) {
+            for(SPFilterButton * btn in [[[self subviews] objectAtIndex:0] subviews])
+            {
+                if (btn.tag >= BtnStartTag && btn.m_filterItemData.mselected)
+                {
+                    btn.m_filterItemData.mselected = NO;
+                    //修改图片
+                    UIImageView *imgView=(UIImageView *)[btn viewWithTag:BUTTON_IMAGE_TAG];
+                    [imgView setHidden:YES];
+                    [btn setSelected:imgView.hidden];
+                }
+            }
+        }else{
+            for(SPFilterButton * btn in [self subviews])
+            {
+                if (btn.tag >= BtnStartTag && btn.m_filterItemData.mselected)
+                {
+                    btn.m_filterItemData.mselected = NO;
+                    //修改图片
+                    UIImageView *imgView=(UIImageView *)[btn viewWithTag:BUTTON_IMAGE_TAG];
+                    [imgView setHidden:YES];
+                    [btn setSelected:imgView.hidden];
+                }
+            }
+        }
+        
 		button.m_filterItemData.mselected = YES;
 		UIImageView *imgView=(UIImageView *)[button viewWithTag:BUTTON_IMAGE_TAG];
 		[imgView setHidden:NO];

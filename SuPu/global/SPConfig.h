@@ -12,6 +12,9 @@
 #define isOS5() \
 ([[[UIDevice currentDevice] systemVersion] floatValue]>=5.0)
 
+//IOS7
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
 #define kTabbarHeight 49.0
 #define kNavHeight 44.0
 

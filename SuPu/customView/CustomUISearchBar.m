@@ -20,12 +20,13 @@
 }
 
 -(void)drawRect:(CGRect)rect {
-    [[[self subviews] objectAtIndex:0] setAlpha:0.0];
-    UIImage *image = [UIImage imageNamed: @"搜索栏"];
-    if (iPad) {
-        image = [UIImage imageNamed: @"search_bar"];
-    }
+//    [[[self subviews] objectAtIndex:0] setAlpha:0.0];
+//    UIImage *image = [UIImage imageNamed: @"搜索栏"];
+//    if (iPad) {
+//        image = [UIImage imageNamed: @"search_bar"];
+//    }
+//    
+//    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     
-    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 @end

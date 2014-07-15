@@ -16,7 +16,9 @@
 #define kAreaCode @"areaCode"
 #define kSerializeStr(a,b,c)   [NSString stringWithFormat:@"%@ %@ %@",a,b,c];
 
-@interface SPAddAddressViewController ()
+@interface SPAddAddressViewController (){
+    UIToolbar *toolbar;
+}
 @property (retain, nonatomic) NSString *lastselect_row0;
 @property (retain, nonatomic) NSString *lastselect_row1;
 @property BOOL isPad;
@@ -274,6 +276,11 @@
         CGRect frame=CGRectMake(0, self.view.frameHeight - 86, 320, 216);
         cityPicker = [[UIPickerView alloc] initWithFrame:frame];
     }
+    if (IS_IOS7) {
+        cityPicker.backgroundColor=[UIColor whiteColor];
+    }
+    
+//    [self.view addSubview:[self toolbar:@"选择地址"]];
     cityPicker.dataSource = self;
     cityPicker.delegate = self;
     cityPicker.showsSelectionIndicator = YES;      // 这个弄成YES, picker中间就会有个条, 被选中的样子
@@ -923,6 +930,8 @@
     
     [UIView animateWithDuration:0.6 animations:^{
         cityPicker.frame=rect;
+        //添加toolbar   2014-7-15
+         [self.view addSubview:[self toolbar:@""]];
     }];
     UITextField *textField=(UITextField *)[self.view viewWithTag:2];
     if (!isModify) {
@@ -951,9 +960,11 @@
     
     UIControl *l_control=(UIControl *)sender;
     [l_control removeFromSuperview];
+    [toolbar removeFromSuperview];
     [self hideCityPicker];
 }
 -(void)hideCityPicker{
+     [toolbar removeFromSuperview];
     CGRect rect=cityPicker.frame;
     if (self.isPad) {
         rect.origin.y=960-100;
@@ -1025,5 +1036,24 @@
     [name release];
     [super dealloc];
 }
+
+#pragma mark - Private Methods
+/**
+ *  选择器按钮
+ *
+ *  @param title <#title description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIToolbar *)toolbar:(NSString *)title {
+     toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(cityPicker.frame.origin.x, cityPicker.frame.origin.y, cityPicker.frame.size.width, 44)];
+    toolbar.tintColor = [UIColor blackColor];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(hideCityPicker)];
+     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(hideCityPicker)];
+    UIBarButtonItem *placeHolderButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:cancelButton, placeHolderButton, doneButton, nil]];
+    return toolbar;
+}
+
 
 @end

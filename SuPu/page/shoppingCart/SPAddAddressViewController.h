@@ -12,6 +12,8 @@
 #import "SPAddressAddOrUpdateAction.h"
 #import "GCPlaceholderTextView.h"
 #import "SPAddressDeleteAction.h"
+#import "UIPickerTitleView.h"
+
 @interface SPAddAddressViewController : SPBaseViewController<SPBuildAddressActionDelegate,UIPickerViewDataSource,UIPickerViewDelegate,SPAddressAddOrUpdateActionDelegate,UITextFieldDelegate,UITextViewDelegate,SPAddressDeleteActionDelegate>{
     SPBuildAddressAction  *buildAddressAction;
     
@@ -42,6 +44,8 @@
 @property(nonatomic,retain) NSMutableArray *proviceArray,*cityArray,*regionArray;
 @property(nonatomic,retain) IBOutlet UIButton *setDefaultAddressBtn;
 @property(nonatomic,retain) IBOutlet UIButton *deleAddressBtn;
+
+@property (retain, nonatomic) UIPickerTitleView *ptv;
 
 -(IBAction)setDefaultAddressAction:(id)sender;
 -(IBAction)deleAddressAction:(id)sender;

@@ -136,7 +136,8 @@
     homeTopAction_.m_delegate_homeTop = self;
     
     searchBar_.delegate=self;
-   
+ 
+ 
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -247,9 +248,13 @@
 #pragma mark -
 #pragma mark -让键盘消失的事件；
 -(void)hiddenKeyBoard:(id)sender{
-    [searchBar_ setText:@""];
-    [searchBar_ resignFirstResponder];
+//    [searchBar_ setText:@""];
+//    [searchBar_ resignFirstResponder];
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+
     UIControl *l_control=(UIControl *)sender;
+    [l_control removeFromSuperview];
+    
     [l_control removeFromSuperview];
 }
 
@@ -283,7 +288,7 @@
     if (isVaild && [self isAvaild:searchBar.text]) {
         [searchBar resignFirstResponder];
         [[self.view viewWithTag:ControlTag] removeFromSuperview];
-        [Go2PageUtility go2ProductListViewController:self withKeyword:searchBar_.text withBrandID:nil classifiedID:nil title:searchBar_.text isBarCode:self.isBarCode];
+        [Go2PageUtility go2ProductListViewController:self withKeyword:searchBar.text withBrandID:nil classifiedID:nil title:searchBar.text isBarCode:self.isBarCode];
         searchBar.text=nil;
         self.isBarCode = NO;
     }else{

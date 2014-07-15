@@ -391,8 +391,8 @@ static void *BlockGetImplementation(id block);
 		if (strcmp(protoArgType, blockArgType))
 			blockIsCompatible = NO;
 	}
-	
-	NSAlwaysAssert(blockIsCompatible, @"Attempt to implement %s selector with incompatible block (selector: %c%s)", isClassMethod ? "class" : "instance", "+-"[!!isClassMethod], sel_getName(selector));
+	//2014-7-14  注释当前代码
+//	NSAlwaysAssert(blockIsCompatible, @"Attempt to implement %s selector with incompatible block (selector: %c%s)", isClassMethod ? "class" : "instance", "+-"[!!isClassMethod], sel_getName(selector));
 	
 	block = [[block copy] autorelease];
 	[self.blockMap setObject: block forKey: BLOCK_MAP_DICT_KEY(selector, isClassMethod)];

@@ -119,6 +119,8 @@
             label.text = @"发票抬头：";
             [_footer addSubview:label];
             _edt_head = [[UITextField alloc] initWithFrame:CGRectMake(80, 10, 230, 21)];
+            //添加文本框样式  2014-7-14
+             _edt_head.borderStyle = UITextBorderStyleRoundedRect;
             _edt_head.placeholder = @"个人";
             _edt_head.font =[UIFont systemFontOfSize:14];
             if (self.invoiceHead){

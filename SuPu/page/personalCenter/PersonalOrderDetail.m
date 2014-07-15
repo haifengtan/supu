@@ -520,6 +520,7 @@
     [mobileteltiplabel release];
     
     mobiletelmessagelabel.backgroundColor = [UIColor clearColor];
+    
     if (self.personalorder.Mobile == nil || self.personalorder.Tel == nil || [self.personalorder.Mobile isEqualToString:@""] || [self.personalorder.Tel isEqualToString:@""]) {
         mobiletelmessagelabel.text = [NSString stringWithFormat:@"%@%@",self.personalorder.Mobile,self.personalorder.Tel];
     }else{

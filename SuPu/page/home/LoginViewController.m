@@ -85,7 +85,12 @@
         loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(184, 240, 400, 72)];
         [loginbtn.titleLabel setFont:[UIFont boldSystemFontOfSize:30]];
     }else{
-        loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 110, 200, 36)];
+        //2014-7-14添加判断
+        if (IS_IOS7) {
+             loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 140, 200, 36)];
+        }else{
+            loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 110, 200, 36)];
+        }
         [loginbtn.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     }
     UIImage *btnimage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"登录按钮" ofType:@"png"]];

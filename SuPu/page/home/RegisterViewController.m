@@ -344,9 +344,14 @@
             if(self.isPad){
                 ptv = [[UIPickerTitleView alloc] initWithFrame:CGRectMake(0, 960-100-207, 768, 207)];
             }else{
-                ptv = [[UIPickerTitleView alloc] initWithFrame:CGRectMake(0, 280, 320, 200)];
+                ptv = [[UIPickerTitleView alloc] initWithFrame:CGRectMake(0, 280, 320, 190)];
             }
             UIDatePicker *datepicker = [[UIDatePicker alloc] init];
+            //设置背景颜色 2014-7-14
+            if (IS_IOS7) {
+                 datepicker.backgroundColor=[UIColor whiteColor];
+            }
+           
             datepicker.datePickerMode = UIDatePickerModeDate;
             datepicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:365*24*60*60*30];
             ptv.pickerview = (UIPickerView *)datepicker;

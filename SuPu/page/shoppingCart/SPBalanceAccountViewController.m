@@ -90,6 +90,13 @@
     [super viewDidLoad];
     self.title = @"结算中心";
     self.UMStr = @"结算中心";
+    
+    //如果系统版本大于ios  table上移  2014-7-14
+    if (IS_IOS7) {
+        CGRect tableFarm=self.tableView.frame;
+        self.tableView.frame = CGRectMake(tableFarm.origin.x,tableFarm.origin.y-30, tableFarm.size.width, tableFarm.size.height);
+    }
+    
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"背景.jpg"]];
     stitleArray=[[NSMutableArray alloc] initWithObjects:@"",@"支付方式：",@"现金账户：",@"配送方式：",@"发票信息：", @"优 惠 劵：",@"",@"留  言：",nil];
     

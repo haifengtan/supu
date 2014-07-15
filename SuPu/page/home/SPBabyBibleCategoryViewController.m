@@ -82,8 +82,15 @@
         
         [((UIImageView *)[[cell.contentView subviews] objectAtIndex:1]) setImageWithURL:OUO_URL(cld.mPicUrl) placeholderImage:[UIImage imageNamed:@"95-91.png"]];
     }else{
+//
+//        [((UIImageView *)[[cell.contentView subviews] objectAtIndex:1]) setImageWithURL:OUO_URL(cld.mPicUrl) placeholderImage:[UIImage imageNamed:@"60-60.png"]];
+        //增加为空判断   2014-7-11
+        if (!cld.mPicUrl) {
+            [((UIImageView *)[[cell.contentView subviews] objectAtIndex:1]) setImageWithURL:OUO_URL(cld.mPicUrl) placeholderImage:[UIImage imageNamed:@"60-60.png"]];
+        }else{
+            [((UIImageView *)[[cell.contentView subviews] objectAtIndex:1]) setImage:[UIImage imageNamed:@"60-60.png"]];
+        }
         
-        [((UIImageView *)[[cell.contentView subviews] objectAtIndex:1]) setImageWithURL:OUO_URL(cld.mPicUrl) placeholderImage:[UIImage imageNamed:@"60-60.png"]];
     }
  
 }
