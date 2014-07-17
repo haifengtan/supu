@@ -42,6 +42,13 @@
     }else{
         _tableView = [[SPBaseTableView alloc] initWithFrame:OUO_RECT(0, 0, 320, [SPStatusUtility getScreenHeight] - kTabbarHeight - kNavHeight - 20) style:UITableViewStyleGrouped];
     }
+    
+    //如果系统版本大于ios  table上移  2014-7-14
+       if (IS_IOS7) {
+           CGRect tableFarm=_tableView.frame;
+            _tableView.frame = CGRectMake(tableFarm.origin.x,tableFarm.origin.y-35, tableFarm.size.width, tableFarm.size.height+35);
+        }
+    
     _tableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
     _tableView.delegate = self;
     _tableView.dataSource = self;

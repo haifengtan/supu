@@ -87,7 +87,7 @@
     }else{
         //2014-7-14添加判断
         if (IS_IOS7) {
-             loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 140, 200, 36)];
+             loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 160, 200, 36)];
         }else{
             loginbtn = [[UIButton alloc] initWithFrame:CGRectMake(60, 110, 200, 36)];
         }

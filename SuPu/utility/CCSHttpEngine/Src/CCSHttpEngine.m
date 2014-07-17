@@ -35,9 +35,10 @@
     self = [super init];
     if (self) {
         _m_mutArray_request = [[NSMutableArray alloc] initWithCapacity:10];
-        
-        _m_timeInterval_timeout = 20;              // 默认超时20秒
-        _m_int_numberOfTimesToRetryOnTimeout = 0;  // 超时重试0次
+         _m_timeInterval_timeout = 40;
+        _m_int_numberOfTimesToRetryOnTimeout = 3;
+//        _m_timeInterval_timeout = 20;              // 默认超时20秒
+//        _m_int_numberOfTimesToRetryOnTimeout = 0;  // 超时重试0次
         _m_bool_allowCompressedResponse = YES;     // 默认支持gzip
     }
     return self;
